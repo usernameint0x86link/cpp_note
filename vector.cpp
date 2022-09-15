@@ -31,6 +31,27 @@
 
 int main(void)
 {
+	std::vector<int> vec;
+	vec.reserve(200000);
+	for (int i = 0; i < 200000; ++i)
+	{ vec.push_back(rand() % 100 + 1); }
+
+	/*for (int i = 0; i < vec.size(); ++i)
+	{ std::cout << vec[i] << " "; }
+	std::cout << std::endl;
+	*/
+	// delete all even numbers of the container
+	for (auto it = vec.begin(); it != vec.end();)
+	{
+		if (*it % 2 == 0)
+		{ it = vec.erase(it); }
+		else
+		{ it++; }
+	}
+
+	for (auto &i : vec)
+	{ std::cout << i << " "; }
+	std::cout << std::endl;
 
 
 	return 0;
