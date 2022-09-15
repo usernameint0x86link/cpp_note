@@ -9,7 +9,7 @@
  * 常用方法:
  * 	增加
  * 		vec.push_back(30); // 末尾添加，O(1)  ---可能会导致容器扩容
- * 		vec.insert(it, 20);
+ * 		vec.insert(it, 20); // 会返回一个迭代器，指向当前位置
  * 		vec.insert(vec.begin() + i, 20); // O(n)
  * 	删除
  * 		vec.pop_back(); // O(1)
